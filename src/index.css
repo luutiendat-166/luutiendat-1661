@@ -1,0 +1,196 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: "Times New Roman", Times, "Tinos", "Liberation Serif", serif;
+    --font-sub: "Times New Roman", Times, "Tinos", "Liberation Serif", serif;
+    --font-body: "Times New Roman", Times, "Tinos", "Liberation Serif", serif;
+    --font-mono: "Courier New", monospace;
+  }
+
+  body {
+    font-family: "Times New Roman", Times, "Tinos", "Liberation Serif", serif;
+    background-color: #050507;
+    color: #f1f5f9;
+  }
+}
+
+.font-heading,
+.font-sub,
+.font-mono-tech {
+  font-family: "Times New Roman", Times, "Tinos", "Liberation Serif", serif;
+}
+
+.font-times {
+  font-family: "Times New Roman", Times, "Tinos", "Liberation Serif", serif !important;
+}
+
+.font-arial {
+  font-family: Arial, "Helvetica Neue", "Arimo", "Liberation Sans", sans-serif !important;
+}
+
+.vietnamese-clean {
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+/* Headlights Projection Cone Effect (Nhỏ gọn, tinh tế và chân thật như ban đầu) */
+.headlight-cone-subtle-left {
+  background: radial-gradient(
+    ellipse 75% 100% at 30% 0%,
+    rgba(255, 255, 250, 0.45) 0%,
+    rgba(255, 245, 220, 0.22) 35%,
+    rgba(255, 240, 200, 0.08) 65%,
+    transparent 85%
+  );
+  filter: blur(6px);
+  transform: perspective(600px) rotateX(42deg) rotateZ(-10deg);
+  transform-origin: top center;
+}
+
+.headlight-cone-subtle-right {
+  background: radial-gradient(
+    ellipse 75% 100% at 65% 0%,
+    rgba(255, 255, 250, 0.45) 0%,
+    rgba(255, 245, 220, 0.22) 35%,
+    rgba(255, 240, 200, 0.08) 65%,
+    transparent 85%
+  );
+  filter: blur(6px);
+  transform: perspective(600px) rotateX(42deg) rotateZ(10deg);
+  transform-origin: top center;
+}
+
+/* Red Taillight at rear & Rearward Reflection (Đèn hậu phản chiếu ra sau đít xe) */
+.taillight-red-bulb {
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 120, 120, 1) 0%,
+    rgba(255, 20, 20, 0.95) 40%,
+    rgba(180, 0, 0, 0.6) 75%,
+    transparent 90%
+  );
+  box-shadow: 
+    0 0 15px rgba(255, 40, 40, 1),
+    0 0 35px rgba(230, 0, 0, 0.9),
+    0 0 60px rgba(200, 0, 0, 0.6);
+}
+
+/* Chiếu đỏ tỏa ngược ra không gian phía sau đuôi/đít xe */
+.taillight-rear-cast {
+  background: radial-gradient(
+    ellipse 85% 65% at 0% 50%,
+    rgba(255, 30, 30, 0.45) 0%,
+    rgba(220, 10, 10, 0.25) 40%,
+    rgba(160, 0, 0, 0.08) 70%,
+    transparent 85%
+  );
+  filter: blur(14px);
+  transform: perspective(700px) rotateY(-20deg);
+  transform-origin: left center;
+}
+
+/* Vệt sáng đỏ phản chiếu xuống sàn phía sau đít xe */
+.taillight-floor-rear {
+  background: radial-gradient(
+    ellipse 80% 50% at 20% 50%,
+    rgba(255, 10, 10, 0.3) 0%,
+    rgba(200, 0, 0, 0.12) 50%,
+    transparent 80%
+  );
+  filter: blur(16px);
+}
+
+/* Drifting Volumetric Smoke / Fog Keyframes */
+@keyframes smokeDriftSlow {
+  0% {
+    transform: translate3d(-4%, 0, 0) scale(1);
+    opacity: 0.28;
+  }
+  50% {
+    transform: translate3d(4%, -2%, 0) scale(1.08);
+    opacity: 0.42;
+  }
+  100% {
+    transform: translate3d(-4%, 0, 0) scale(1);
+    opacity: 0.28;
+  }
+}
+
+@keyframes smokeDriftFast {
+  0% {
+    transform: translate3d(5%, 1%, 0) scale(1.05);
+    opacity: 0.22;
+  }
+  50% {
+    transform: translate3d(-5%, -2%, 0) scale(0.96);
+    opacity: 0.38;
+  }
+  100% {
+    transform: translate3d(5%, 1%, 0) scale(1.05);
+    opacity: 0.22;
+  }
+}
+
+.animate-smoke-slow {
+  animation: smokeDriftSlow 18s ease-in-out infinite alternate;
+}
+
+.animate-smoke-fast {
+  animation: smokeDriftFast 12s ease-in-out infinite alternate;
+}
+
+/* 3D Depth Title Multi-layer shadows */
+.text-shadow-luxury {
+  text-shadow: 
+    0 1px 0 rgba(255, 255, 255, 0.25),
+    0 2px 4px rgba(0, 0, 0, 0.8),
+    0 10px 24px rgba(0, 0, 0, 0.9),
+    0 20px 48px rgba(0, 0, 0, 0.95);
+}
+
+.text-shadow-crimson {
+  text-shadow: 
+    0 0 20px rgba(230, 0, 0, 0.4),
+    0 0 60px rgba(230, 0, 0, 0.2);
+}
+
+.vignette-radial {
+  background: radial-gradient(
+    circle at center,
+    rgba(5, 5, 7, 0) 0%,
+    rgba(5, 5, 7, 0.45) 50%,
+    rgba(5, 5, 7, 0.88) 80%,
+    rgba(5, 5, 7, 0.98) 100%
+  );
+}
+
+/* Glassmorphism Luxury Border */
+.luxury-glass {
+  background: rgba(13, 14, 18, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.luxury-glass-accent {
+  background: rgba(18, 14, 16, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(220, 38, 38, 0.25);
+}
+
+/* Custom sleek scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #07070a;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2c35;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #dc2626;
+}
