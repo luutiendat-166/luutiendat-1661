@@ -19,26 +19,26 @@ export default function App() {
   const introAudioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    const audio = introAudioRef.current;
-    if (!audio) return;
+  const audio = introAudioRef.current;
+  if (!audio) return;
 
-    audio.volume = 0.8;
+  audio.volume = 0.8;
 
-    audio.play().catch(() => {
-      setAudioBlocked(true);
-    });
+  audio.play().catch(() => {
+    setAudioBlocked(true);
+  });
 
-    const timer = window.setTimeout(() => {
-      setShowIntro(false);
-      audio.pause();
-      audio.currentTime = 0;
-    }, 5000);
+  const timer = window.setTimeout(() => {
+    setShowIntro(false);
+    audio.pause();
+    audio.currentTime = 0;
+  }, 5000);
 
-    return () => {
-      window.clearTimeout(timer);
-      audio.pause();
-    };
-  }, []);
+  return () => {
+    window.clearTimeout(timer);
+    audio.pause();
+  };
+}, []);
 
 
   const handleOpenConsultation = () => {
