@@ -39,7 +39,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenConsultation }
               TIẾN ĐẠT
             </h2>
             <p className="text-sm font-semibold tracking-wider text-neutral-300 mt-1 uppercase">
-              Corporate Finance - Investment &bull; Quận 9 - TP.HCM
+              Corporate Finance - Investment
             </p>
           </div>
 
