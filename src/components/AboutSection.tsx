@@ -30,7 +30,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenConsultation }
           <div>
             <div className="flex items-center space-x-2 text-xs font-bold uppercase tracking-wider text-[#dc2626] mb-2">
               <span className="w-5 h-0.5 bg-[#dc2626]" />
-              <span>Tab 01: Giới Thiệu</span>
+              <span>Giới Thiệu</span>
             </div>
             <h2 
               className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white font-times"

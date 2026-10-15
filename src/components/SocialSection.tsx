@@ -72,7 +72,7 @@ export const SocialSection: React.FC = () => {
         <div className="mb-14 pb-6 border-b border-neutral-800/80">
           <div className="flex items-center space-x-2 text-xs font-bold uppercase tracking-wider text-[#dc2626] mb-2">
             <span className="w-5 h-0.5 bg-[#dc2626]" />
-            <span>Tab 05: Mạng Xã Hội & Kết Nối</span>
+            <span>Mạng Xã Hội & Kết Nối</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white">
             Mạng Lưới Kênh Liên Lạc

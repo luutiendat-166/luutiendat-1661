@@ -119,22 +119,22 @@ export default function App() {
           onOpenConsultation={handleOpenConsultation}
         />
 
-        {/* Tab 01: Giới thiệu */}
+        {/* Giới thiệu */}
         <AboutSection onOpenConsultation={handleOpenConsultation} />
 
-        {/* Tab 02: Kinh nghiệm */}
+        {/* Kinh nghiệm */}
         <ExperienceSection onOpenConsultation={handleOpenConsultation} />
 
-        {/* Tab 03: Học tập */}
+        {/* Học tập */}
         <EducationSection />
 
-        {/* Tab 04: Đam mê */}
+        {/* Đam mê */}
         <PassionsSection />
 
-        {/* Tab 05: Mạng xã hội */}
+        {/* Mạng xã hội */}
         <SocialSection />
 
-        {/* Tab 06: Khác */}
+        {/* Khác */}
         <OtherSection onOpenConsultation={handleOpenConsultation} />
       </main>
 
