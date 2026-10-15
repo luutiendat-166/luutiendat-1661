@@ -48,6 +48,10 @@ class AudioSynthesizer {
     }
   }
 
+  public stop5sTrack() {
+    this.stopAll();
+  }
+
   public stopAll() {
     if (this.stopTimer) {
       clearTimeout(this.stopTimer);

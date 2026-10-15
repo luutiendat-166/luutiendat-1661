@@ -15,31 +15,52 @@ export default function App() {
 
   // Intro Ferrari: tự kết thúc sau 5 giây
   const [showIntro, setShowIntro] = useState(true);
-  const [audioBlocked, setAudioBlocked] = useState(false);
   const introAudioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-  const audio = introAudioRef.current;
-  if (!audio) return;
+    const audio = introAudioRef.current;
+    if (!audio) return;
 
-  audio.volume = 0.8;
+    audio.volume = 0.85;
 
-  audio.play().catch(() => {
-    setAudioBlocked(true);
-  });
+    // Tự động phát âm thanh ngay lập tức
+    const startAudio = () => {
+      audio.play().catch(() => {});
+    };
 
-  const timer = window.setTimeout(() => {
-    setShowIntro(false);
-    audio.pause();
-    audio.currentTime = 0;
-  }, 5000);
+    // Thử phát ngay
+    const playPromise = audio.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        // Nếu trình duyệt yêu cầu cử chỉ người dùng trước khi phát âm thanh (Autoplay policy),
+        // tự động mở khóa ngay khi người dùng chạm hoặc di chuột bất kỳ đâu, không cần bấm nút riêng
+        const unlock = () => {
+          audio.play().catch(() => {});
+          window.removeEventListener('pointerdown', unlock);
+          window.removeEventListener('touchstart', unlock);
+          window.removeEventListener('click', unlock);
+          window.removeEventListener('scroll', unlock);
+          window.removeEventListener('mousemove', unlock);
+        };
+        window.addEventListener('pointerdown', unlock, { once: true });
+        window.addEventListener('touchstart', unlock, { once: true });
+        window.addEventListener('click', unlock, { once: true });
+        window.addEventListener('scroll', unlock, { once: true });
+        window.addEventListener('mousemove', unlock, { once: true });
+      });
+    }
 
-  return () => {
-    window.clearTimeout(timer);
-    audio.pause();
-  };
-}, []);
+    const timer = window.setTimeout(() => {
+      setShowIntro(false);
+      audio.pause();
+      audio.currentTime = 0;
+    }, 5000);
 
+    return () => {
+      window.clearTimeout(timer);
+      audio.pause();
+    };
+  }, []);
 
   const handleOpenConsultation = () => {
     setIsConsultationOpen(true);
@@ -56,7 +77,6 @@ export default function App() {
     }
   };
 
-  
   return (
     <div
       className="min-h-screen bg-[#030305] text-[#f1f5f9] flex flex-col selection:bg-[#dc2626] selection:text-white"
@@ -64,7 +84,15 @@ export default function App() {
     >
       {/* INTRO FERRARI 458 ITALIA - 5 GIÂY */}
       {showIntro && (
-        <div className="ferrari-intro">
+        <div 
+          className="ferrari-intro cursor-pointer"
+          onClick={() => {
+            const audio = introAudioRef.current;
+            if (audio && audio.paused) {
+              audio.play().catch(() => {});
+            }
+          }}
+        >
           <div className="intro-light intro-light-left" />
           <div className="intro-light intro-light-right" />
 
@@ -76,10 +104,11 @@ export default function App() {
 
           <div className="intro-vignette" />
 
+          {/* Chữ to: TIẾN ĐẠT, Chữ nhỏ: FERRARI 458 ITALIA */}
           <div className="intro-brand">
-            <span>FERRARI</span>
+            <span style={{ fontFamily: '"Times New Roman", Times, "Tinos", serif' }}>TIẾN ĐẠT</span>
             <span className="intro-line" />
-            <small>458 ITALIA · DATFINANCE</small>
+            <small>FERRARI 458 ITALIA · DATFINANCE</small>
           </div>
 
           <audio
@@ -87,24 +116,6 @@ export default function App() {
             src="/audio/ferrari-intro.mp3"
             preload="auto"
           />
-
-          {audioBlocked && (
-            <button
-              className="intro-audio-button"
-              onClick={() => {
-                const audio = introAudioRef.current;
-
-                if (audio) {
-                  audio
-                    .play()
-                    .then(() => setAudioBlocked(false))
-                    .catch(() => setAudioBlocked(true));
-                }
-              }}
-            >
-              Bật âm thanh động cơ
-            </button>
-          )}
         </div>
       )}
 

@@ -717,14 +717,14 @@ export const HeroFerrari3D: React.FC<HeroFerrari3DProps> = ({
             <span>Đèn xe</span>
           </button>
 
-          {/* Intro Sound Trigger */}
+          {/* Cold Start Sound Trigger */}
           <button
             onClick={() => soundManager.playIntroRoar()}
             className="px-3.5 py-2 rounded-sm text-xs font-bold uppercase tracking-wider text-neutral-300 hover:text-white luxury-glass hover:border-neutral-700 transition-all cursor-pointer flex items-center space-x-1.5"
-            title="Phát lại hiệu ứng âm thanh đề máy nổ lúc mở màn"
+            title="Âm thanh đề máy nổ lạnh Ferrari V8 (Cold Start)"
           >
             <Sparkles className="w-3.5 h-3.5 text-[#ef4444]" />
-            <span>Âm Thanh Intro</span>
+            <span>Cold Start</span>
           </button>
 
           {/* 5-Second Sound Button 1: Launch */}
