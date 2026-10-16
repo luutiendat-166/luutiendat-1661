@@ -27,34 +27,34 @@ export const SocialSection: React.FC = () => {
   // Dữ liệu chính xác 100% từ 3 video mới nhất trên kênh TikTok @tiendat_166 (tdatspotting)
   const realTikTokVideos = [
     {
-      id: '7642668184260119829',
-      title: 'Range Rover biển số phát tài 51K-988.88 cực khủng #porsche #rangerover #biensodep',
+      id: '757516094426615060',
+      title: 'Porsche 911 Carrera S',
       thumbnail: '/video-1-cover.jpg',
-      views: '5,052',
-      likes: '156',
-      comments: '2',
+      views: '2.0M',
+      likes: '198.4K',
+      comments: '1.7K',
       duration: '0:20',
-      url: 'https://www.tiktok.com/@tiendat_166/video/7642668184260119829',
+      url: 'https://www.tiktok.com/@tiendat_166/video/757516094426615060',
     },
     {
-      id: '7641647685325442325',
-      title: 'Gặp Porsche 911 Dakar trên đường đi làm #porsche #porsche911 #porschedakar #porscheclub #trending',
+      id: '7621888868646409346',
+      title: 'Ferrari 488 GTB Mansory',
       thumbnail: '/porsche-911-dakar.jpg',
-      views: '3,258',
-      likes: '141',
-      comments: '2',
-      duration: '0:13',
-      url: 'https://www.tiktok.com/@tiendat_166/video/7641647685325442325',
+      views: '577.9K',
+      likes: '47.1K',
+      comments: '222',
+      duration: '0:19',
+      url: 'https://www.tiktok.com/@tiendat_166/video/7621888868646409346',
     },
     {
-      id: '7640270814490807573',
-      title: 'Biển có bằng xe không nhỉ #lexus #biensodep #trending #viral #luxurycars',
+      id: '7447535681716374802',
+      title: 'Lamborghini Aventador SV',
       thumbnail: '/lexus-bien-dep.jpg',
-      views: '4,389',
-      likes: '126',
-      comments: '3',
-      duration: '0:12',
-      url: 'https://www.tiktok.com/@tiendat_166/video/7640270814490807573',
+      views: '593K',
+      likes: '33.3K',
+      comments: '202',
+      duration: '0:16',
+      url: 'https://www.tiktok.com/@tiendat_166/video/7447535681716374802',
     },
   ];
 
@@ -199,18 +199,13 @@ export const SocialSection: React.FC = () => {
                   {/* Title video thật từ TikTok */}
                   <div className="p-4 space-y-3 bg-[#0a0a0e] flex-1 flex flex-col justify-between">
                     <div>
-                      <div className="text-[10px] font-mono text-[#ef4444] uppercase font-bold mb-1">
-                        Video 0{idx + 1} &bull; @tiendat_166
-                      </div>
+
                       <h4 className="text-xs sm:text-sm font-bold text-white group-hover:text-[#ef4444] transition-colors line-clamp-2 leading-relaxed">
                         {video.title}
                       </h4>
                     </div>
 
-                    <div className="pt-2.5 border-t border-neutral-850 flex items-center justify-between text-xs text-neutral-400 group-hover:text-white transition-colors">
-                      <span className="text-[11px] font-semibold">Xem video trên TikTok</span>
-                      <ExternalLink className="w-3.5 h-3.5 text-[#ef4444]" />
-                    </div>
+
                   </div>
                 </a>
               ))}
