@@ -15,7 +15,8 @@ export const ASSETS = {
   FERRARI_SKETCHFAB_URL: 'https://sketchfab.com/3d-models/2019-ferrari-488-pista-1d1344847d8540e9a6a7f21184ab7769',
   
   // Executive Finance Boardroom Suite Background
-  FINANCE_SUITE_BG: '/finance-executive-suite.jpg',
+  FINANCE_SUITE_BG: '/finance-executive-suite.png',
+  EXECUTIVE_AVATAR: '/executive-avatar.jpg',
   
   // Brand details
   BRAND: {

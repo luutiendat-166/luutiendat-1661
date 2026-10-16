@@ -115,6 +115,8 @@ export default function App() {
             ref={introAudioRef}
             src="/audio/ferrari-intro.mp3"
             preload="auto"
+            autoPlay
+            playsInline
           />
         </div>
       )}
