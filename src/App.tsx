@@ -108,7 +108,7 @@ export default function App() {
           <div className="intro-brand">
             <span style={{ fontFamily: '"Times New Roman", Times, "Tinos", serif' }}>TIẾN ĐẠT</span>
             <span className="intro-line" />
-            <small>FERRARI 458 ITALIA · DATFINANCE</small>
+            <small>DATFINANCE</small>
           </div>
 
           <audio
