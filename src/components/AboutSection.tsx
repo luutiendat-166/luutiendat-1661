@@ -44,7 +44,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenConsultation }
           </div>
 
           <div className="mt-4 md:mt-0 max-w-md text-xs sm:text-sm text-neutral-400 font-normal leading-relaxed">
-            Chuyên gia Cố vấn Tài chính Doanh nghiệp & Đầu tư Chiến lược. Đồng hành cùng các tập đoàn, quỹ đầu tư tư nhân và cổ đông sáng lập tối ưu hóa cấu trúc vốn, thẩm định định giá và điều phối các thương vụ M&A quy mô lớn.
+            Chuyên viên tài chính doanh nghiệp với hơn 3 năm kinh nghiệm trong phân tích tài chính, quản trị và hoạch định chiến lược, M&A, vận hành ERP và thương mại quốc tế. Có kinh nghiệm làm việc với các ngân hàng lớn và quỹ đầu tư tư nhân, đồng thời tham gia các hoạt động tài chính và vận hành tại nhiều lĩnh vực, bao gồm FMCG, F&B, Convention và sản xuất xuất khẩu. Là Thạc sĩ Tài chính – Ngân hàng với khả năng kết hợp tư duy phân tích tài chính, góc nhìn đầu tư và hiểu biết vận hành doanh nghiệp nhằm hỗ trợ ra quyết định, tối ưu hiệu quả hoạt động và thúc đẩy tăng trưởng bền vững. Định hướng phát triển năng lực chuyên môn thông qua chứng chỉ CFA và nghiên cứu tiến sĩ, hướng tới vị trí CFO với mục tiêu đồng hành cùng doanh nghiệp trong quản trị tài chính, chiến lược tăng trưởng, M&A và quá trình IPO.
           </div>
         </div>
 
@@ -113,7 +113,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenConsultation }
                 <div className="flex items-center justify-between text-xs">
                   <div>
                     <span className="text-[10px] uppercase text-neutral-400 tracking-wider block">Khu Vực Hoạt Động</span>
-                    <strong className="text-white font-bold">Quận 9, TP.HCM & ASEAN Desk</strong>
+                    <strong className="text-white font-bold">Quận 9, TP.HCM</strong>
                   </div>
                   <span className="px-2 py-1 rounded-sm bg-[#dc2626]/20 text-[#ef4444] font-bold text-[10px] border border-[#dc2626]/40">
                     Active Advisory
